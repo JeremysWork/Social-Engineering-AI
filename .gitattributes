@@ -1,2 +1,104 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Install required libraries
+!pip install pandas scikit-learn matplotlib seaborn --quiet
+
+# Import necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+import os
+
+# Load the Enron dataset or use serialized data if available
+if os.path.exists('enron_spam_data_corrected.pkl'):
+    with open('enron_spam_data_corrected.pkl', 'rb') as f:
+        data = pickle.load(f)
+else:
+    from google.colab import files
+    uploaded = files.upload()
+    data = pd.read_csv('enron_spam_data.csv')
+
+# Check the columns to understand the structure of the dataset
+print("Columns in dataset:", data.columns)
+
+# Step 1: Combine 'Subject' and 'Message' into a single text column if they exist
+if 'Subject' in data.columns and 'Message' in data.columns:
+    data['text'] = data['Subject'].fillna('') + " " + data['Message'].fillna('')
+else:
+    data['text'] = data[data.columns[0]].fillna('')
+
+# Drop unnecessary columns
+data = data[['text', 'Spam/Ham']] if 'Spam/Ham' in data.columns else data
+
+# Install required libraries
+!pip install pandas scikit-learn matplotlib seaborn --quiet
+
+# Import necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+import os
+
+# Load the Enron dataset or use serialized data if available
+if os.path.exists('enron_spam_data_corrected.pkl'):
+    with open('enron_spam_data_corrected.pkl', 'rb') as f:
+        data = pickle.load(f)
+else:
+    from google.colab import files
+    uploaded = files.upload()
+    data = pd.read_csv('enron_spam_data.csv')
+
+# Check the columns to understand the structure of the dataset
+print("Columns in dataset:", data.columns)
+
+# Step 1: Combine 'Subject' and 'Message' into a single text column if they exist
+if 'Subject' in data.columns and 'Message' in data.columns:
+    data['text'] = data['Subject'].fillna('') + " " + data['Message'].fillna('')
+else:
+    data['text'] = data[data.columns[0]].fillna('')
+
+# Drop unnecessary columns
+data = data[['text', 'Spam/Ham']] if 'Spam/Ham' in data.columns else data
+
+# Install required libraries
+!pip install pandas scikit-learn matplotlib seaborn --quiet
+
+# Import necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+import os
+
+# Load the Enron dataset or use serialized data if available
+if os.path.exists('enron_spam_data_corrected.pkl'):
+    with open('enron_spam_data_corrected.pkl', 'rb') as f:
+        data = pickle.load(f)
+else:
+    from google.colab import files
+    uploaded = files.upload()
+    data = pd.read_csv('enron_spam_data.csv')
+
+# Check the columns to understand the structure of the dataset
+print("Columns in dataset:", data.columns)
+
+# Step 1: Combine 'Subject' and 'Message' into a single text column if they exist
+if 'Subject' in data.columns and 'Message' in data.columns:
+    data['text'] = data['Subject'].fillna('') + " " + data['Message'].fillna('')
+else:
+    data['text'] = data[data.columns[0]].fillna('')
+
+# Drop unnecessary columns
+data = data[['text', 'Spam/Ham']] if 'Spam/Ham' in data.columns else data
