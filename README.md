@@ -13,7 +13,7 @@ It will either determine it is Spam Or Ham. If you agree, type yes and it will k
 If it is NOT correct, type no and it will ask you to relabel it by typing Ham, or Spam. It will then save this remark into its database for further Learning. Below i'll give you an example Spam, and Ham prompt.
 
 
-Spam
+***Spam
 " Dear Valued Customer,
 
 We have detected unusual activity on your account and require immediate verification to ensure its security. If no action is taken within 24 hours, your account will be suspended.
@@ -31,15 +31,8 @@ The Security Team
 SecureBankAlerts™ "
 
 
-Ham
+***Ham
 " Get a special Black Friday deal for dedicated IP
-
-A dedicated IP lets you:
-
-    Access websites that block VPN connections.
-    Skip annoying “select images with cars” boxes.
-    Enjoy smoother online banking.
-    Access secured work resources remotely.
 
 Take advantage of our Black Friday deal: Get 20% off on a 6-month plan, which comes down to $4.69/month ($28.14 in total).
 Special Black Friday offer for dedicated IP
