@@ -2,7 +2,8 @@
 Final Project
 
 Download Order!!!!
-
+(1) enron_spam_data.zip - Zip this file to receive the .csv
+(2)
 
 This is our 635 AI Project. Here are some steps to use our project correctly.
 First. Run the first section of code in Google Collab. This will prompt you to upload a CSV file. This will be downloaded here or through canvas.
