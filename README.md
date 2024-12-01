@@ -1,5 +1,9 @@
 # CYSE635
 Final Project
+
+Download Order!!!!
+
+
 This is our 635 AI Project. Here are some steps to use our project correctly.
 First. Run the first section of code in Google Collab. This will prompt you to upload a CSV file. This will be downloaded here or through canvas.
 It will take a couple minutes to sort through the dataset once you input it. After 100% run through the second block of code.
